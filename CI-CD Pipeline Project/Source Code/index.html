@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BLACK MOTORS</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      overflow:hidden;
+      background:black;
+      color:white;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      width:100%;
+      height:100vh;
+      position:relative;
+      overflow:hidden;
+
+      background:
+      linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:25px 60px;
+      position:absolute;
+      top:0;
+      left:0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:100;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:white;
+      letter-spacing:3px;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:white;
+      margin-left:30px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .menu a:hover{
+      color:#ff3c00;
+    }
+
+    /* CONTENT */
+
+    .content{
+      position:absolute;
+      top:50%;
+      left:7%;
+      transform:translateY(-50%);
+      max-width:700px;
+      z-index:10;
+    }
+
+    .content h1{
+      font-size:95px;
+      line-height:1;
+      margin-bottom:30px;
+      color:white;
+      text-shadow:0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .content p{
+      font-size:22px;
+      line-height:1.8;
+      color:#f1f5f9;
+      margin-bottom:18px;
+      text-shadow:0 0 10px rgba(0,0,0,0.8);
+    }
+
+    .content button{
+      margin-top:25px;
+      padding:16px 42px;
+      border:none;
+      border-radius:40px;
+      background:#ff3c00;
+      color:white;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .content button:hover{
+      transform:scale(1.08);
+      background:#ff5c2c;
+    }
+
+    /* MOVING CARS */
+
+    .cars{
+      position:absolute;
+      bottom:40px;
+      width:100%;
+      height:260px;
+      overflow:hidden;
+    }
+
+    .car{
+      position:absolute;
+      width:320px;
+    }
+
+    .car img{
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 0 30px rgba(255,255,255,0.2);
+    }
+
+    .car1{
+      bottom:0;
+      animation:moveCar 12s linear infinite;
+    }
+
+    .car2{
+      bottom:90px;
+      animation:moveCar 16s linear infinite;
+      animation-delay:3s;
+    }
+
+    .car3{
+      bottom:170px;
+      width:260px;
+      animation:moveCar 20s linear infinite;
+      animation-delay:1s;
+    }
+
+    @keyframes moveCar{
+
+      from{
+        left:-400px;
+      }
+
+      to{
+        left:110%;
+      }
+    }
+
+    /* ROAD LINE */
+
+    .road{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      height:8px;
+
+      background:repeating-linear-gradient(
+      to right,
+      white 0px,
+      white 100px,
+      transparent 100px,
+      transparent 170px);
+
+      animation:roadMove 2s linear infinite;
+    }
+
+    @keyframes roadMove{
+
+      from{
+        background-position-x:0;
+      }
+
+      to{
+        background-position-x:-170px;
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        padding:20px;
+      }
+
+      .menu{
+        display:none;
+      }
+
+      .content{
+        left:5%;
+        right:5%;
+      }
+
+      .content h1{
+        font-size:55px;
+      }
+
+      .content p{
+        font-size:17px;
+      }
+
+      .car{
+        width:200px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+      <div class="logo">
+        ROYAL MOTORS
+      </div>
+
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Cars</a>
+        <a href="#">Luxury</a>
+        <a href="#">Contact</a>
+      </div>
+
+    </nav>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <h1>
+        DRIVE THE FUTURE
+      </h1>
+
+      <p>
+        Discover premium luxury cars engineered for speed,
+        performance, elegance, and next-generation design.
+        Experience power beyond limits with machines crafted
+        for those who demand excellence on every road.
+      </p>
+
+      <p>
+        From aggressive sports cars to futuristic hypercars,
+        BLACK MOTORS delivers unmatched driving experiences
+        with cutting-edge innovation, aerodynamic precision,
+        and breathtaking performance.
+      </p>
+
+      <p>
+        Every vehicle represents luxury, dominance, and
+        engineering perfection. Step into a world where
+        power meets sophistication and every drive becomes
+        unforgettable.
+      </p>
+
+      <button>
+        Explore Collection
+      </button>
+
+    </div>
+
+    <!-- MOVING CARS -->
+
+    <div class="cars">
+
+      <div class="car car1">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="car">
+      </div>
+
+      <div class="car car2">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="car">
+      </div>
+
+      <div class="car car3">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop" alt="car">
+      </div>
+
+    </div>
+
+    <!-- ROAD -->
+
+    <div class="road"></div>
+
+  </section>
+
+</body>
+
+</html>
